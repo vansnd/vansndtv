@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050608">
+  <title>Личный кабинет — Vansnd TV</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="account.css">
+</head>
+<body class="account-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vansnd TV — главная"><img class="brand-logo" src="logo.jpg" alt="Vansnd TV"></a>
+    <nav class="nav">
+      <a href="index.html#videos">Видео</a>
+      <a href="profile.html">Мой профиль</a>
+      <a class="account-link" href="#" id="logoutTop">Выйти</a>
+    </nav>
+  </header>
+  <main class="account-layout">
+    <div class="page-eyebrow"><span class="live-dot"></span> VANSND TV COMMUNITY</div>
+    <h1>Личный кабинет</h1>
+    <p class="page-lead">Управляй аккаунтом и настройками своего профиля.</p>
+    <div class="account-grid">
+      <aside class="account-sidebar">
+        <div class="avatar" id="avatar">V</div>
+        <h2 id="sideNickname">Загрузка…</h2>
+        <p id="sideEmail" class="muted">Проверяем аккаунт</p>
+        <div class="side-links">
+          <a class="side-link active" href="account.html">▦ <span>Обзор</span></a>
+          <a class="side-link" href="profile.html">◉ <span>Мой профиль</span></a>
+          <a class="side-link" href="index.html">⌂ <span>На главную</span></a>
+        </div>
+      </aside>
+      <section class="account-content">
+        <div class="content-heading"><div><span class="category">АККАУНТ</span><h2>Данные профиля</h2></div><span class="status-pill">● Аккаунт</span></div>
+        <form id="profileForm">
+          <div class="field"><label for="nickname">Никнейм</label><input id="nickname" name="nickname" maxlength="20" autocomplete="nickname" required><small>3–20 символов: латиница, цифры, _ или -</small></div>
+          <div class="field"><label for="email">Электронная почта</label><input id="email" type="email" disabled><small>Email нельзя изменить здесь.</small></div>
+          <div id="accountMessage" class="form-message" role="status" aria-live="polite"></div>
+          <button class="button primary" id="saveProfile" type="submit">Сохранить изменения <span>→</span></button>
+        </form>
+        <div class="quick-links">
+          <a class="quick-card" href="profile.html"><span class="quick-icon blue">◉</span><span><b>Открыть профиль</b><small>Посмотреть, как выглядит твоя страница</small></span><strong>→</strong></a>
+          <a class="quick-card" href="index.html#videos"><span class="quick-icon red">▶</span><span><b>Видео канала</b><small>Вернуться к контенту Vansnd TV</small></span><strong>→</strong></a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><img class="brand-logo" src="logo.jpg" alt="Vansnd TV"></a><span>© <span id="year"></span> Vansnd TV</span><a href="index.html">На главную</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>

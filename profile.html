@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050608">
+  <title>Мой профиль — Vansnd TV</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="account.css">
+</head>
+<body class="account-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vansnd TV — главная"><img class="brand-logo" src="logo.jpg" alt="Vansnd TV"></a>
+    <nav class="nav">
+      <a href="index.html#videos">Видео</a>
+      <a href="account.html">Личный кабинет</a>
+      <a class="account-link" href="#" id="logoutTop">Выйти</a>
+    </nav>
+  </header>
+  <main class="account-layout profile-layout">
+    <div class="page-eyebrow"><span class="live-dot"></span> ПРОФИЛЬ УЧАСТНИКА</div>
+    <h1>Мой профиль</h1>
+    <p class="page-lead">Твоя страница в сообществе Vansnd TV.</p>
+    <section class="public-profile-card">
+      <div class="profile-cover"><span class="cover-square cover-blue"></span><span class="cover-square cover-red"></span></div>
+      <div class="profile-main">
+        <div class="avatar profile-avatar" id="avatar">V</div>
+        <div class="profile-identity"><h2 id="profileNickname">Загрузка…</h2><p id="profileEmail" class="muted"></p><span class="status-pill">● Участник Vansnd TV</span></div>
+        <a class="button primary profile-edit" href="account.html">Редактировать профиль <span>→</span></a>
+      </div>
+      <div class="profile-details">
+        <div><span class="category">НИКНЕЙМ</span><b id="detailNickname">—</b></div>
+        <div><span class="category">АККАУНТ</span><b>Подключён через Supabase</b></div>
+      </div>
+      <div class="profile-actions"><a class="button secondary" href="index.html">На главную</a><button class="button secondary" id="logoutButton" type="button">Выйти из аккаунта</button></div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><img class="brand-logo" src="logo.jpg" alt="Vansnd TV"></a><span>© <span id="year"></span> Vansnd TV</span><a href="account.html">Личный кабинет</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>

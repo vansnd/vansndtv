@@ -1,0 +1,90 @@
+/* Registration page styled to match the original Vansnd TV logo. */
+.auth-page {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 12% 30%, #0755ff19, transparent 34%), radial-gradient(ellipse at 88% 70%, #f3133510, transparent 30%), var(--bg);
+}
+.auth-header { position: relative; }
+.back-link { color: #b9bdc6; font-size: 12px; font-weight: 700; }
+.back-link:hover { color: white; }
+.auth-layout { max-width: 1120px; min-height: calc(100vh - 155px); margin: 0 auto; padding: 58px 28px 68px; display: grid; grid-template-columns: 1fr 440px; align-items: center; gap: 80px; }
+.auth-intro { position: relative; min-height: 440px; overflow: hidden; padding-top: 28px; }
+.auth-intro h1 { margin: 24px 0 18px; font-size: 51px; letter-spacing: -2.5px; }
+.auth-intro > p { max-width: 390px; margin-bottom: 30px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.benefit { position: relative; z-index: 1; display: flex; align-items: center; gap: 13px; margin: 18px 0; }
+.benefit > span { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 8px; background: #0755ff24; color: white; font-weight: 900; }
+.benefit b { display: block; font-size: 12px; }
+.benefit small { display: block; margin-top: 4px; color: #9298a4; font-size: 10px; }
+.auth-decoration { position: absolute; bottom: -100px; left: 160px; color: #ffffff08; font-size: 210px; font-weight: 900; letter-spacing: -20px; pointer-events: none; }
+.auth-decoration span { color: #f3133512; font-size: 60px; }
+.auth-card { padding: 28px; border: 1px solid #ffffff19; border-radius: 16px; background: linear-gradient(150deg, #12151b, #090a0d); box-shadow: 0 25px 75px #0008; }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 9px; background: #050608; }
+.tab { padding: 11px; border: 0; border-radius: 6px; background: transparent; color: #9298a4; font: 800 11px Manrope, Arial, sans-serif; cursor: pointer; }
+.tab.active { background: var(--blue); color: white; }
+.form-heading { margin: 26px 0 22px; }
+.form-heading h2 { margin: 0 0 7px; font-size: 23px; letter-spacing: -.8px; }
+.form-heading p { margin: 0; color: var(--muted); font-size: 11px; }
+.field { margin: 17px 0; }
+.field label { display: block; margin-bottom: 8px; color: #d9dbe0; font-size: 11px; font-weight: 800; }
+.field input { width: 100%; height: 45px; padding: 0 13px; border: 1px solid #343943; border-radius: 8px; outline: none; background: #080a0e; color: var(--text); font: 12px Manrope, Arial, sans-serif; transition: border-color .18s, box-shadow .18s; }
+.field input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #0755ff24; }
+.field input::placeholder { color: #6f7683; }
+.field small, .captcha-wrap small { display: block; margin-top: 7px; color: #838a97; font-size: 9px; line-height: 1.6; }
+.captcha-wrap { min-height: 50px; margin: 20px 0 14px; }
+.captcha-wrap > div { min-height: 0; }
+.form-message { border-radius: 8px; font-size: 11px; line-height: 1.7; }
+.form-message:not(:empty) { margin: 12px 0; padding: 10px 12px; border: 1px solid #0755ff55; background: #0755ff13; color: #dbe5ff; }
+.form-message.error { border-color: #f3133566; background: #f3133515; color: #ffb9c3; }
+.submit-button { width: 100%; margin-top: 4px; }
+.submit-button:disabled { opacity: .6; cursor: wait; transform: none; }
+.legal-note { margin: 17px 0 0; color: #7d8490; font-size: 9px; line-height: 1.7; }
+.auth-footer { min-height: 65px; }
+.auth-footer a { color: #b9bdc6; }
+.auth-footer a:hover { color: white; }
+@media (max-width: 850px) {
+  .auth-layout { max-width: 520px; min-height: auto; padding-top: 35px; grid-template-columns: 1fr; gap: 30px; }
+  .auth-intro { min-height: 0; padding: 0; }
+  .auth-intro h1 { font-size: 42px; }
+  .auth-decoration { display: none; }
+  .auth-card { padding: 23px; }
+}
+@media (max-width: 480px) {
+  .auth-header { padding: 10px 18px; }
+  .auth-layout { padding: 28px 16px 45px; }
+  .auth-intro h1 { font-size: 37px; }
+  .auth-card { padding: 19px; }
+  .form-heading h2 { font-size: 21px; }
+}
+
+
+/* Original Vansnd TV logo image: header and footer */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 150px;
+  height: 56px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.footer-brand .brand-logo {
+  width: 132px;
+  height: 48px;
+}
+
+@media (max-width: 540px) {
+  .brand-logo {
+    width: 124px;
+    height: 46px;
+  }
+
+  .footer-brand .brand-logo {
+    width: 116px;
+    height: 42px;
+  }
+}

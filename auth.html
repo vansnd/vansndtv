@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11141b"><title>Вход и регистрация — Vansnd TV</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="site-header auth-header"><a class="brand" href="index.html"><img class="brand-logo" src="logo.jpg" alt="Vansnd TV"></a><a class="back-link" href="index.html">← На главную</a></header>
+  <main class="auth-layout">
+    <section class="auth-intro"><div class="eyebrow"><span class="live-dot"></span> VANSND TV COMMUNITY</div><h1>Твой аккаунт.<br><span>Твой мир.</span></h1><p>Зарегистрируйся, чтобы стать частью сообщества Vansnd TV.</p>
+      <div class="benefit"><span>✓</span><div><b>Один аккаунт</b><small>Вход по электронной почте и паролю</small></div></div>
+      <div class="benefit"><span>✓</span><div><b>Подтверждение почты</b><small>Защита аккаунта с помощью email</small></div></div>
+      <div class="benefit"><span>✓</span><div><b>Защита от ботов</b><small>Проверка CAPTCHA при регистрации и входе</small></div></div>
+      <div class="auth-decoration">V<span>TV</span></div>
+    </section>
+    <section class="auth-card">
+      <div class="auth-tabs"><button class="tab active" id="registerTab" type="button">Регистрация</button><button class="tab" id="loginTab" type="button">Вход</button></div>
+      <div class="form-heading"><h2 id="formTitle">Создать аккаунт</h2><p id="formSubtitle">Заполни поля ниже — это займёт минуту.</p></div>
+      <form id="authForm" novalidate>
+        <div class="field" id="nicknameField"><label for="nickname">Никнейм</label><input id="nickname" autocomplete="nickname" placeholder="Например, Vansnd_01" maxlength="20"><small>3–20 символов: латиница, цифры, _ или -</small></div>
+        <div class="field"><label for="email">Электронная почта</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="password">Пароль</label><input id="password" type="password" autocomplete="new-password" placeholder="Не менее 8 символов" required minlength="8"><small id="passwordHelp">Используй надёжный пароль длиной от 8 символов.</small></div>
+        <div class="field" id="repeatField"><label for="repeatPassword">Повтори пароль</label><input id="repeatPassword" type="password" autocomplete="new-password" placeholder="Ещё раз пароль"></div>
+        <div class="captcha-wrap"><div id="turnstileWidget"></div><small>Проверка CAPTCHA защищает форму от автоматических регистраций.</small></div>
+        <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        <button class="button primary submit-button" id="submitButton" type="submit">Создать аккаунт <span>→</span></button>
+      </form>
+      <p class="legal-note">Продолжая, ты соглашаешься использовать сайт по назначению и указывать действующий адрес электронной почты.</p>
+    </section>
+  </main>
+  <footer class="auth-footer"><span>© <span id="year"></span> Vansnd TV</span><a href="index.html">На главную</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoaded" async defer></script>
+  <script src="config.js"></script><script src="auth.js"></script>
+</body>
+</html>

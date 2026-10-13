@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11141b">
+  <title>Vansnd TV — официальный сайт канала</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vansnd TV — главная">
+      <img class="brand-logo" src="logo.jpg" alt="Vansnd TV">
+    </a>
+    <nav class="nav">
+      <a href="#videos">Видео</a><a href="#about">О канале</a>
+      <a class="account-link" href="auth.html" id="accountLink">Войти / Регистрация</a>
+    </nav>
+    <button class="menu-button" id="menuButton" aria-label="Открыть меню">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> ОФИЦИАЛЬНЫЙ САЙТ КАНАЛА</div>
+        <h1>Добро пожаловать на<br><span>Vansnd TV</span></h1>
+        <p class="hero-text">Летсплеи, игры, VR и другие интересные видео — всё о канале в одном месте.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#videos">Смотреть видео <span>↗</span></a>
+          <a class="button secondary" href="auth.html">Создать аккаунт</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span> Подпишись, чтобы не пропускать новые выпуски</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="tv-card"><div class="tv-top"><span></span><span></span><span></span></div>
+          <div class="tv-screen"><div class="play-triangle"></div><div class="screen-lines"></div></div>
+          <div class="tv-label">VANSND <b>TV</b></div>
+        </div>
+        <div class="floating-chip chip-top">▶ LET'S PLAY</div><div class="floating-chip chip-bottom">✦ VR • GAMES • FUN</div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-heading"><div><div class="eyebrow">СМОТРИ И СМОТРИ ЕЩЁ</div><h2>Что есть в нашем канале?</h2></div>
+        <a class="text-link" id="youtubeLink" href="https://www.youtube.com/" target="_blank" rel="noopener"></a>
+      </div>
+      <div class="video-grid">
+        <div class="twitch-player">
+ <iframe src="https://player.twitch.tv/?channel=vansndtv&parent=127.0.0.1:5500" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+</div>
+    </section>
+
+    <section class="about-section" id="about">
+              <a class="about-icon" href="index.html" aria-label="Vansnd TV — главная">
+      <img class="brand-logo" src="logo.jpg" alt="Vansnd TV">
+    </a>
+      <div><div class="eyebrow">КТО МЫ?</div><h2>Это Vansnd TV</h2><p>Сайт канала, где можно следить за обновлениями и создать собственный аккаунт. Добро пожаловать в наше комьюнити!</p></div>
+      <a class="button secondary" href="auth.html">Присоединиться <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><img class="brand-logo" src="logo.jpg" alt="Vansnd TV"></a><span>© <span id="year"></span> Vansnd TV</span><a href="auth.html">Аккаунт</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
